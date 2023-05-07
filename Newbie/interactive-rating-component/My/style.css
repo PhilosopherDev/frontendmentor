@@ -1,0 +1,301 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    /* color */
+
+    --color-orange: hsl(25, 97%, 53%);
+    --color-light-grey: hsl(217, 12%, 63%);
+    --color-medium-grey: hsl(216, 12%, 54%);
+    --color-dark-blue: hsl(213, 19%, 18%);
+    --color-very-dark-blue: hsl(216, 12%, 8%);
+
+    /* font */
+
+    --ff-overpass: 'Overpass', sans-serif;
+}
+
+
+body {
+    background-color: var(--color-very-dark-blue);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 32px;
+}
+
+.card {
+    box-sizing: border-box;
+    border-radius: 20px;
+    max-width: 412px;
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+    padding: 2rem;
+}
+
+.header img {
+    background-color: var(--color-dark-blue);
+    padding: 16px;
+    border-radius: 32px;
+    line-height: 51px;
+    text-align: center;
+}
+
+.step {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.title {
+    font-family: var(--ff-overpass);
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 2.1875rem;
+    color: white;
+}
+
+.content {
+    font-family: var(--ff-overpass);
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    color: var(--color-light-grey);
+}
+
+.btn__number {
+    background-color: var(--color-dark-blue);
+    color: var(--color-medium-grey);
+    border-radius: 50%;
+    width: 51px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn__number-active {
+    background-color: var(--color-light-grey);
+    color: white;
+}
+
+.btn__number:hover {
+    background-color: var(--color-orange);
+    color: white;
+}
+
+.btn__submit {
+    background-color: var(--color-orange);
+    border-radius: 22.5px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn__submit:hover {
+    background-color: white;
+}
+
+.btn__text {
+    font-family: var(--ff-overpass);
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.btn__text:hover {
+    color: var(--color-orange);
+}
+
+/* layout - mix */
+
+.header-title {
+    margin-top: 1.875rem;
+}
+
+.title-content {
+    margin-top: 0.4375rem;
+}
+
+.content-step {
+    margin-top: 1.5rem;
+}
+
+.btn__submit-step {
+    margin-top: 2rem;
+}
+
+/* thank you */
+
+.card__thankyou {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__thankyou img {
+    margin-top: 13px;
+    width: 162px;
+    height: 108px;
+}
+
+.selected {
+    padding: 6px 20px 4px;
+    background-color: var(--color-dark-blue);
+    border-radius: 20px;
+    vertical-align: center;
+    margin: 2rem 0;
+}
+
+.selected__content {
+    color: var(--color-orange);
+    font-weight: 400;
+}
+
+.card__thankyou .content {
+    margin: 1rem 0 13px;
+    text-align: center;
+    width: 340px;
+}

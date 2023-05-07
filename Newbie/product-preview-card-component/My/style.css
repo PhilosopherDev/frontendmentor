@@ -1,0 +1,228 @@
+/* reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Custom */
+
+:root {
+    /* colors */
+    --color-white: #ffffff;
+    --color-cream: #f2eae2;
+    --color-green: #3D8168;
+    --color-deep-green: #1A4032;
+    --color-aurometal-saurus: #6C7289;
+    --color-gunmetal: #1C232B;
+    
+    /* font-sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem; 
+    --fs-500: 1rem;
+    --fs-400: 0.875rem;
+    --fs-300: 0.8125rem;
+    --fs-200: 0.75rem;
+    
+    /* font-families */
+    --ff-fraunces: "Fraunces", serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+}
+
+/* Color */
+
+/* Typography */
+
+body {
+    background-color: var(--color-cream);
+}
+
+.container {    
+    display: flex;
+    min-height: 100vh; /* y 축 스크롤 나오게하려고 지정 */
+    align-items: center;
+    justify-content: center;
+}
+
+.media {    
+    background-color: var(--color-white);
+    display: flex;
+    max-width: 600px; /* media query 영향으로 이거보다 작아질 일이 없음 */
+    max-height: 450px;
+    border-radius: 10px;
+
+    margin: 1.5rem 0;
+}
+
+.media__img-wrapper {
+    width: 50%;    
+}
+
+.media__img {
+    max-width: 100%; 
+    max-height: 100%;
+    
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.media__body {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.media__header {
+    font-family: var(--ff-montserrat);
+    color: var(--color-aurometal-saurus);
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--fs-200);
+
+    letter-spacing: 5px;
+}
+
+.media__title {
+    font-family: var(--ff-fraunces);
+    font-weight: 700;
+    font-size: var(--fs-800);
+}
+
+.media__contents {
+    color: var(--color-aurometal-saurus);
+    font-family: var(--ff-montserrat);
+    font-weight: 500;
+    font-size: var(--fs-400);
+
+    line-height: 23px;
+}
+
+.media__price {
+    display: flex;
+    align-items: center;
+}
+
+.media__price_real-cost {
+    color: var(--color-green);
+    font-family: var(--ff-fraunces);
+    font-weight: 700;
+    font-size: var(--fs-800);
+    font-size: 2rem;
+    
+    margin-right: 1rem;
+}
+
+.media__price_first-cost {
+    color: var(--color-aurometal-saurus);
+    font-family: var(--ff-montserrat);
+    font-weight: 500;
+    font-size: var(--fs-300);
+    text-decoration: line-through;
+    line-height: 23px;
+}
+
+.btn {
+    background-color: var(--color-green);
+    width: 100%;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--color-deep-green);
+}
+
+.btn__icon {
+    margin-right: var(--fs-300);
+}
+
+.btn__text {
+    font-family: var(--ff-montserrat);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: var(--fs-400);
+}
+
+@media screen and (max-width: 610px) {
+    .container {    
+        min-width: 20rem; /* 이거보다 작아지면 가로가 무시되지 않는다 */
+        box-sizing: border-box;
+    }
+
+    .media {
+        flex-direction: column;
+        
+        /* 고정 값으로 넣어주는 것으론 충분하나, media content 가 늘어나면 깨진다. 확인해보자. */
+
+        min-height: 30rem;
+        max-width: 22rem;
+        max-height: 40rem;
+    }
+
+    .media__img-wrapper {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .media__img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .media__body {
+        width: 100%;
+        padding: 1.2rem;
+        min-height: 20rem;
+        justify-content: space-between;
+    }
+}   

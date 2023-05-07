@@ -1,0 +1,235 @@
+/* reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom */
+
+:root {
+    /* color */
+    
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+    --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --color-very-light-gray: hsl(0, 0%, 95%);
+
+    /* font families */
+    
+	--ff-big-shoulders-display: 'Big Shoulders Display', serif;
+	--ff-lexend-deca: 'Lexend Deca', sans-serif;
+
+	/* font sizes */
+
+    --fs-800: 3.5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+}
+
+/* Block */
+
+.container {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* card Block & Element */
+
+.card {
+	/* default for desktop */
+	border-radius: 5px;
+	max-width: 306px;
+	min-height: 500px;
+}
+
+.card__layout {
+	box-sizing: border-box;
+	padding: 48px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* title Block & Element */
+
+.title {
+	font-size: var(--fs-700);
+	font-weight: 700;
+	font-family: var(--ff-big-shoulders-display);
+	color: var(--color-very-light-gray);
+	text-transform: uppercase;
+}
+
+/* content Block & Element */
+
+.content {
+	font-size: var(--fs-400);
+	font-weight: 400;
+	font-family: var(--ff-lexend-deca);
+	opacity: 0.75;
+	color: white;
+	line-height: 25px;
+}
+
+/* button Block & Element */
+
+.button {
+	border-radius: 30px;
+	border: 2px solid white;
+	background-color: white;
+	width: 146px;
+	height: 48px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: transparent;
+}
+
+.button__content {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+
+	font-family: var(--ff-lexend-deca);
+	font-size: var(--fs-400);
+	font-weight: 400;
+}
+
+/* color Block & Element */
+
+.color__sedan {
+	color: var(--color-bright-orange);
+}
+
+.color__suvs {
+	color: var(--color-dark-cyan);
+}
+
+.color__luxury {
+	color: var(--color-very-dark-cyan);
+}
+
+.button:hover .color__sedan {
+	color: white;
+}
+
+.button:hover .color__suvs {
+	color: white;
+}
+
+.button:hover .color__luxury {
+	color: white;
+}
+
+.color__bg-sedan {
+	background-color: var(--color-bright-orange);
+}
+
+.color__bg-suvs {
+	background-color: var(--color-dark-cyan);
+}
+
+.color__bg-luxury {
+	background-color: var(--color-very-dark-cyan);
+}
+
+/* logo Block & Element */
+
+.logo {
+	width: 64px;
+	height: 40px;
+	background-repeat: no-repeat;
+}
+
+.logo__sedan {
+	background-image: url('./images/icon-sedans.svg');
+}
+
+.logo__suvs {
+	background-image: url('./images/icon-suvs.svg');
+}
+
+.logo__luxury {
+	background-image: url('./images/icon-luxury.svg');
+}
+
+/* Mix - for layout */
+
+.card_logo {
+	margin-bottom: 10px;
+}
+
+.card_content {
+	margin-bottom: 58px;
+}
+
+/* for responsive mobile */
+
+@media (max-width: 925px) {
+	.container {
+		margin: 88px 0;
+		flex-direction: column;
+	}
+
+	.card {
+		max-width: 327px;
+	}
+}
