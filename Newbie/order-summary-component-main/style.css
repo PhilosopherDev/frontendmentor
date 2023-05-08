@@ -6,12 +6,211 @@
     --very-pale-blue: hsl(225, 100%, 98%);
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
+    --purple: hsla(245, 83%, 68%, 1);
 
     --font-size: 16px;
 
-    --font-red-hot-display: 'Red Hot Display', sans-serif;
+    --font-red-hat-display: 'Red Hat Display', sans-serif;
 
     --font-weight-500: 500;
     --font-weight-700: 700;
     --font-weight-900: 900;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+    height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+body {
+    /* background: no-repeat url('./images/pattern-background-mobile.svg'); */
+    background-color: hsl(225, 100%, 92%, 1);
+
+    font-family: var(--font-red-hat-display);
+    font-weight: var(--font-weight-500);
+    color: var(--desaturated-blue);
+
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+.card {
+    --content-padding: 3rem;
+    --content-spacing: 1.5rem;
+
+    border-radius: 1rem;
+    max-width: 450px;
+    background-color: white;
+}
+
+.card__image {
+    width: 100%;
+    max-height: 220px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card__content {
+    display: grid;
+    gap: var(--content-spacing);
+    padding: var(--content-padding);
+    text-align: center;
+}
+
+.card__title {
+    color: var(--dark-blue);
+    font-weight: var(--font-weight-900)
+}
+
+.card__info {
+    font-size: 0.9375rem;
+    padding: 0 1.5rem;
+}
+
+.card__change {
+    display: flex;
+    border-radius: 0.5rem;
+    align-items: center;
+    background-color: hsl(228, 100%, 99%, 1);
+    height: 100px;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.card__plan {
+    color: var(--dark-blue);
+    font-weight: var(--font-weight-900)
+}
+
+.button__change {
+    color: var(--bright-blue);
+    text-decoration: underline;
+    font-size: 0.8125rem;
+    font-weight: var(--font-weight-700);
+
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button__change:hover {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.button__pay {
+    border: 0;
+    border-radius: 1rem;
+    background-color: var(--bright-blue);
+    color: white;
+    cursor: pointer;
+
+    height: 50px;
+    font-weight: 900;
+}
+
+.button__pay:hover {
+    background-color: var(--purple);
+}
+
+.button__cancel {
+    all: unset;
+    font-weight: 900;
+    color: var(--desaturated-blue);
+    cursor: pointer;
+}
+
+.button__cancel:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (max-width: 550px) {
+    .card {
+        --content-padding: 2rem;
+        --content-spacing: 1rem;
+        max-width: 330px;
+    }
+
+    .card__image {
+        width: 100%;
+        max-height: 160px;
+    }
+
+    .card__info {
+        padding: 0;
+    }
+
+    .card__change {
+        padding: 0;
+    }
 }
