@@ -10,11 +10,7 @@
 
     --font-size: 16px;
 
-    --font-red-hat-display: 'Red Hat Display', sans-serif;
-
-    --font-weight-500: 500;
-    --font-weight-700: 700;
-    --font-weight-900: 900;
+    --font-family-red-hat-display: 'Red Hat Display', sans-serif;
 }
 
 /*
@@ -96,8 +92,8 @@ body {
     /* background: no-repeat url('./images/pattern-background-mobile.svg'); */
     background-color: hsl(225, 100%, 92%, 1);
 
-    font-family: var(--font-red-hat-display);
-    font-weight: var(--font-weight-500);
+    font-family: var(--font-family-red-hat-display);
+    font-weight: 500;
     color: var(--desaturated-blue);
 
     display: grid;
@@ -129,7 +125,7 @@ body {
 
 .card__title {
     color: var(--dark-blue);
-    font-weight: var(--font-weight-900)
+    font-weight: 900;
 }
 
 .card__info {
@@ -149,14 +145,14 @@ body {
 
 .card__plan {
     color: var(--dark-blue);
-    font-weight: var(--font-weight-900)
+    font-weight: 900;
 }
 
 .button__change {
     color: var(--bright-blue);
     text-decoration: underline;
     font-size: 0.8125rem;
-    font-weight: var(--font-weight-700);
+    font-weight: 700;
 
     border: 0;
     background-color: transparent;
