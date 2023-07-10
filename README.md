@@ -1,1 +1,1 @@
-[My Frontend Mentor Home](https://philosopherprogrammer.github.io/FrontendMentor/)
+[My Frontend Mentor Home](https://philosopherdev.github.io/FrontendMentor/)
