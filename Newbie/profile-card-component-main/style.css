@@ -147,6 +147,8 @@ table {
 body {
     font-size: 18px;
     font-family: "Kumbh Sans", sans-serif;
+    /* background: url(./assets/images/bg-pattern-top.svg) top -600px left -200px no-repeat,
+        url(./assets/images/bg-pattern-bottom.svg) bottom -600px right -200px no-repeat; */
     background-color: var(--dark-cyan);
 }
 
@@ -155,6 +157,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    position: relative;
 }
 
 .card {
@@ -243,4 +246,29 @@ body {
 
 .footer__item-desc {
     margin-top: 0.5rem;
+}
+
+.container-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/bg-pattern-top.svg) top -500px left -300px no-repeat,
+        url(./images/bg-pattern-bottom.svg) bottom -600px right -200px no-repeat;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1200px) {
+    .container-overlay {
+        background: url(./images/bg-pattern-top.svg) top -600px left -400px no-repeat,
+            url(./images/bg-pattern-bottom.svg) bottom -600px right -400px no-repeat;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .container-overlay {
+        background: url(./images/bg-pattern-top.svg) top -700px left -500px no-repeat,
+            url(./images/bg-pattern-bottom.svg) bottom -700px right -500px no-repeat;
+    }
 }
